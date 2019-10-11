@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol photoVCDelegate: AnyObject {
+protocol PhotoVCDelegate: AnyObject {
     func showActionView(tag: Int)
 }

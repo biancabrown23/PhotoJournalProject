@@ -22,6 +22,7 @@
 		9683A494234D250A00D2FDEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A492234D250A00D2FDEE /* LaunchScreen.storyboard */; };
 		9683A49F234D250A00D2FDEE /* PhotoJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A49E234D250A00D2FDEE /* PhotoJournalTests.swift */; };
 		9683A4AA234D250A00D2FDEE /* PhotoJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A4A9234D250A00D2FDEE /* PhotoJournalUITests.swift */; };
+		96DA2D9C23514A550006FC47 /* LabelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DA2D9B23514A550006FC47 /* LabelsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9683A4A5234D250A00D2FDEE /* PhotoJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A4A9234D250A00D2FDEE /* PhotoJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoJournalUITests.swift; sourceTree = "<group>"; };
 		9683A4AB234D250A00D2FDEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96DA2D9B23514A550006FC47 /* LabelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9683A486234D250600D2FDEE /* PhotoJournal */,
+				96DA2D9D23514A650006FC47 /* Controller View Cell */,
 				96058AAD234E64B6002DA710 /* Supporting Files */,
 				9683A495234D250A00D2FDEE /* Info.plist */,
 				9683A48D234D250600D2FDEE /* Main.storyboard */,
@@ -180,6 +183,14 @@
 				9683A4AB234D250A00D2FDEE /* Info.plist */,
 			);
 			path = PhotoJournalUITests;
+			sourceTree = "<group>";
+		};
+		96DA2D9D23514A650006FC47 /* Controller View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				96DA2D9B23514A550006FC47 /* LabelsCollectionViewCell.swift */,
+			);
+			path = "Controller View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				9683A48C234D250600D2FDEE /* PhotoEntryViewController.swift in Sources */,
 				96058AA9234E6119002DA710 /* PersistenceHelper.swift in Sources */,
 				96058AB1234E6678002DA710 /* Protocols.swift in Sources */,
+				96DA2D9C23514A550006FC47 /* LabelsCollectionViewCell.swift in Sources */,
 				96058AA6234E5CCF002DA710 /* UserSettingsViewController.swift in Sources */,
 				9683A488234D250600D2FDEE /* AppDelegate.swift in Sources */,
 				96058AB3234E6843002DA710 /* UserDefaults.swift in Sources */,
