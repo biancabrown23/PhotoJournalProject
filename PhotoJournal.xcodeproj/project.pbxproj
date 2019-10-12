@@ -16,7 +16,7 @@
 		96058AB3234E6843002DA710 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96058AB2234E6843002DA710 /* UserDefaults.swift */; };
 		9683A488234D250600D2FDEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A487234D250600D2FDEE /* AppDelegate.swift */; };
 		9683A48A234D250600D2FDEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A489234D250600D2FDEE /* SceneDelegate.swift */; };
-		9683A48C234D250600D2FDEE /* PhotoEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A48B234D250600D2FDEE /* PhotoEntryViewController.swift */; };
+		9683A48C234D250600D2FDEE /* AddPhotoEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683A48B234D250600D2FDEE /* AddPhotoEntryViewController.swift */; };
 		9683A48F234D250600D2FDEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A48D234D250600D2FDEE /* Main.storyboard */; };
 		9683A491234D250A00D2FDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9683A490234D250A00D2FDEE /* Assets.xcassets */; };
 		9683A494234D250A00D2FDEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9683A492234D250A00D2FDEE /* LaunchScreen.storyboard */; };
@@ -53,7 +53,7 @@
 		9683A484234D250600D2FDEE /* PhotoJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9683A487234D250600D2FDEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9683A489234D250600D2FDEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9683A48B234D250600D2FDEE /* PhotoEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntryViewController.swift; sourceTree = "<group>"; };
+		9683A48B234D250600D2FDEE /* AddPhotoEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoEntryViewController.swift; sourceTree = "<group>"; };
 		9683A48E234D250600D2FDEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9683A490234D250A00D2FDEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9683A493234D250A00D2FDEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		96058AA7234E5CDB002DA710 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9683A48B234D250600D2FDEE /* PhotoEntryViewController.swift */,
+				9683A48B234D250600D2FDEE /* AddPhotoEntryViewController.swift */,
 				96058AA3234E5CBA002DA710 /* UserEntriesViewController.swift */,
 				96058AA5234E5CCF002DA710 /* UserSettingsViewController.swift */,
 			);
@@ -118,6 +118,7 @@
 				9683A489234D250600D2FDEE /* SceneDelegate.swift */,
 				9683A490234D250A00D2FDEE /* Assets.xcassets */,
 				9683A492234D250A00D2FDEE /* LaunchScreen.storyboard */,
+				9683A495234D250A00D2FDEE /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,10 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				9683A486234D250600D2FDEE /* PhotoJournal */,
-				96DA2D9D23514A650006FC47 /* Controller View Cell */,
-				96058AAD234E64B6002DA710 /* Supporting Files */,
-				9683A495234D250A00D2FDEE /* Info.plist */,
-				9683A48D234D250600D2FDEE /* Main.storyboard */,
 				9683A49D234D250A00D2FDEE /* PhotoJournalTests */,
 				9683A4A8234D250A00D2FDEE /* PhotoJournalUITests */,
 				9683A485234D250600D2FDEE /* Products */,
@@ -160,6 +157,9 @@
 		9683A486234D250600D2FDEE /* PhotoJournal */ = {
 			isa = PBXGroup;
 			children = (
+				9683A48D234D250600D2FDEE /* Main.storyboard */,
+				96058AAD234E64B6002DA710 /* Supporting Files */,
+				96DA2D9D23514A650006FC47 /* Controller View Cell */,
 				96058AB4234E6856002DA710 /* Models */,
 				96058AAC234E6432002DA710 /* Project Helpers */,
 				96058AA7234E5CDB002DA710 /* View Controllers */,
@@ -325,7 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96058AAB234E641D002DA710 /* ImagePersistence.swift in Sources */,
-				9683A48C234D250600D2FDEE /* PhotoEntryViewController.swift in Sources */,
+				9683A48C234D250600D2FDEE /* AddPhotoEntryViewController.swift in Sources */,
 				96058AA9234E6119002DA710 /* PersistenceHelper.swift in Sources */,
 				96058AB1234E6678002DA710 /* Protocols.swift in Sources */,
 				96DA2D9C23514A550006FC47 /* LabelsCollectionViewCell.swift in Sources */,
@@ -509,7 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5T9S5LMSX;
-				INFOPLIST_FILE = PhotoJournal/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoJournal/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5T9S5LMSX;
-				INFOPLIST_FILE = PhotoJournal/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoJournal/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

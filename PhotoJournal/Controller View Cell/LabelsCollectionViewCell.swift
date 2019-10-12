@@ -9,5 +9,9 @@
 import UIKit
 
 class LabelsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var photoImageLabel: UIImageView!
+    @IBOutlet weak var captionLabel: UILabel!
     
+    @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet weak var actionSheetOutlet: UIButton!
 }
