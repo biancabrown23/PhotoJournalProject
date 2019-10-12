@@ -9,26 +9,48 @@
 import UIKit
 
 class UserEntriesViewController: UIViewController {
-    @IBAction func cancelButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    
+    var image = UIImage() {
+        didSet {
+            photoImageOutlet.image = image 
+        }
     }
     
-
+    // MARK: -- Outlets
+    @IBOutlet weak var photoImageOutlet: UIImageView!
+    
+    @IBOutlet weak var photoDescOutlet: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: -- Toolbar Functions
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func photoLibraryButtonPressed(_ sender: Any) {
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+        
+    }
+}
 
+// MARK: -- Extensions
+
+extension UserEntriesViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+           guard let image = info[.originalImage] as? UIImage else {
+               //couldn't get image
+               return
+           }
+           self.image = image
+           dismiss(animated: true, completion: nil)
+       }
 }

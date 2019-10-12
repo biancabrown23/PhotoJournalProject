@@ -128,7 +128,11 @@
                                     <barButtonItem systemItem="camera" id="8ak-np-x8a"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uyG-jq-Ytm"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="liT-2v-6G2"/>
-                                    <barButtonItem title="Photo Libaray" id="cfQ-Bf-NF8"/>
+                                    <barButtonItem title="Photo Libaray" id="cfQ-Bf-NF8">
+                                        <connections>
+                                            <action selector="photoLibraryButtonPressed:" destination="0Hb-8Y-ZVZ" id="NNl-tf-8Uo"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="A4j-pK-vcw"/>
                                 </items>
                             </toolbar>
@@ -149,6 +153,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="j7M-hG-A9G"/>
                     </view>
+                    <connections>
+                        <outlet property="photoDescOutlet" destination="bW3-E0-Tze" id="wJG-Vj-y4t"/>
+                        <outlet property="photoImageOutlet" destination="1Uk-bA-ITm" id="QRv-nn-5hQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dn7-b4-RVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
