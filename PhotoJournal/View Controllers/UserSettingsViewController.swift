@@ -6,6 +6,8 @@
 //  Copyright © 2019 Bee. All rights reserved.
 //
 
+// TODO: User Defaults. Add Dark Mode functionality and scroll usage to this view controller. 
+
 import UIKit
 
 class UserSettingsViewController: UIViewController {

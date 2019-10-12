@@ -6,6 +6,8 @@
 //  Copyright © 2019 Bee. All rights reserved.
 //
 
+// TODO List: Building functionality to save button with using persistence. Save photo entries to the collection view using file manager. Add validations to the save button with UIAlertController. 
+
 import UIKit
 
 class UserEntriesViewController: UIViewController {
