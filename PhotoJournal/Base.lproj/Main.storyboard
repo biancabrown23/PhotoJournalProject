@@ -125,7 +125,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="icp-S5-ZiI"/>
-                                    <barButtonItem systemItem="camera" id="8ak-np-x8a"/>
+                                    <barButtonItem systemItem="camera" id="8ak-np-x8a">
+                                        <connections>
+                                            <action selector="cameraButtonPressed:" destination="0Hb-8Y-ZVZ" id="s4m-kL-edy"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uyG-jq-Ytm"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="liT-2v-6G2"/>
                                     <barButtonItem title="Photo Libaray" id="cfQ-Bf-NF8">

@@ -12,7 +12,7 @@ class UserEntriesViewController: UIViewController {
     
     var image = UIImage() {
         didSet {
-            photoImageOutlet.image = image 
+            photoImageOutlet.image = image
         }
     }
     
@@ -38,8 +38,17 @@ class UserEntriesViewController: UIViewController {
         imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary
         present(imagePickerController, animated: true, completion: nil)
-        
     }
+    
+    @IBAction func cameraButtonPressed(_ sender: UIBarButtonItem) {
+        let camera = UIImagePickerController()
+        camera.delegate = self
+        camera.sourceType = .camera
+        present(camera, animated: true, completion: nil)
+        // This feature is not applicable on this device. Please do not use. 
+    }
+    
+    
 }
 
 // MARK: -- Extensions
