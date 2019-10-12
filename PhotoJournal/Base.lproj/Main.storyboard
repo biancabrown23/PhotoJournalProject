@@ -136,7 +136,11 @@
                                 <rect key="frame" x="-1" y="68" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="bIW-WD-5x2"/>
+                                    <barButtonItem systemItem="cancel" id="bIW-WD-5x2">
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="0Hb-8Y-ZVZ" id="wBD-Lb-umD"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="amq-Wk-owo"/>
                                     <barButtonItem systemItem="save" id="32u-99-Cro"/>
                                 </items>
