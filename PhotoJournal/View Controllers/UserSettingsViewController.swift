@@ -17,16 +17,20 @@ class UserSettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    func store(darkmode: Bool) {
+//        UserDefaults.userSettings.standard.set(darkmode, forKey: darkModeKey)
+//    }
+//    
+//    func darkModeSwitch() -> Bool {
+//        return UserDefaults.standard.value(forKey: darkModeKey) as? Bool
+//    }
+//    
+//    func store(scrollDirection: Bool) {
+//        UserDefaults.userSettings.standard.set(scrollDirection, forKey: scrollDirectionKey)
+//    }
+//    
+//    func verticalScrollSwitch() -> Bool {
+//        return UserDefaults.standard.value(forKey: scrollDirectionKey) as? Bool
+//    }
 }

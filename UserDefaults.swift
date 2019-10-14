@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class UserDefaults {
+    private init () {}
+    static let userSettings = UserDefaults()
+    private let darkModeKey = "darkMode"
+    private let scrollDirection = "scrollDirection"
+    
+    
+}
