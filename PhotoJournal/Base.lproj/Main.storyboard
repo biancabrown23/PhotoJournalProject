@@ -150,7 +150,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="amq-Wk-owo"/>
-                                    <barButtonItem systemItem="save" id="32u-99-Cro"/>
+                                    <barButtonItem systemItem="save" id="32u-99-Cro">
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="0Hb-8Y-ZVZ" id="HNv-x4-cGA"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

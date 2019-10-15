@@ -25,7 +25,7 @@ class UserEntriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(PersistenceHelper<PhotoEntry>.documentsDirectory())
         // Do any additional setup after loading the view.
     }
     
@@ -50,6 +50,26 @@ class UserEntriesViewController: UIViewController {
         // This feature is not applicable on this device. Please do not use. 
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        guard let image = photoImageOutlet.image else {return}
+        guard let data = image.pngData() else {return}
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.long
+        formatter.timeStyle = .medium
+        let timeStamp = formatter.string(from: date)
+        
+        let captionLabel = photoDescOutlet.text ?? ""
+        let newPhotoEntry = PhotoEntry.init(photo: data, description: captionLabel, date: timeStamp)
+      
+        do {
+            try ImagePersistenceHelper.manager.save(newPhoto: newPhotoEntry)
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print(error)
+        }
+    }
     
 }
 

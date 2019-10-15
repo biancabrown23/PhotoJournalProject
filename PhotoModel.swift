@@ -11,5 +11,5 @@ import Foundation
 struct PhotoEntry: Codable {
   let photo: Data
   let description: String
-  let createdAt: String
+  let date: String
 }

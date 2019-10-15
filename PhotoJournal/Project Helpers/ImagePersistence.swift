@@ -8,18 +8,18 @@
 
 import Foundation
 
-class PhotoPersistenceHelper {
-  static let manager = PhotoPersistenceHelper()
-  
-//  func save(newPhoto: PhotoEntry) throws {
-//    try persistenceHelper.save(newElement: newPhoto)
-//  }
-//  
-//  func getPhotos() throws -> [PhotoEntry] {
-//    return try persistenceHelper.getObjects()
-//  }
-//  
-//  private let persistenceHelper = PersistenceHelper<PhotoEntry>.init(fileName: "MyPhotos.plist")
-//  
+class ImagePersistenceHelper {
+  static let manager = ImagePersistenceHelper()
+    private let persistenceHelper = PersistenceHelper<PhotoEntry>.init(fileName: "PhotoEntries.plist")
+
+    func save(newPhoto: PhotoEntry) throws {
+        try persistenceHelper.save(newElement: newPhoto)
+    }
+    
+    // TODO - a function for Delete photos.
+    // TODO - a function for fetching photos.
+    // TODO - a function for saving edits.
+    
+    
   private init() {}
 }
